@@ -2,7 +2,9 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8" />
-  <title>Meine Webseite</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>El-Carbon – Carbon Parts & Autotuning</title>
+  <meta name="description" content="Carbon Parts, Veredelung & Autotuning: Leichtbau, Performance und ein Look, der bleibt." />
 
   <!-- Bootstrap CSS -->
   <link
@@ -10,14 +12,408 @@
     rel="stylesheet"
   />
 
+  <!-- Optional: Google Font (modern, technisch) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="css/style.css" />
 </head>
-<body>
 
-  <div class="container py-5">
-    <h1>Hello World</h1>
-    <p class="lead">Meine einfache statische Webseite</p>
-  </div>
+<body data-bs-spy="scroll" data-bs-target="#topNav" data-bs-smooth-scroll="true" tabindex="0">
+  <!-- Top glow + subtle noise -->
+  <div class="page-noise" aria-hidden="true"></div>
+
+  <!-- NAV -->
+  <nav id="topNav" class="navbar navbar-expand-lg navbar-dark sticky-top nav-glass">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#top">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="fw-semibold">El-Carbon</span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navItems" aria-controls="navItems" aria-expanded="false" aria-label="Navigation öffnen">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navItems">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+          <li class="nav-item"><a class="nav-link" href="#leistungen">Leistungen</a></li>
+          <li class="nav-item"><a class="nav-link" href="#techniken">Techniken</a></li>
+          <li class="nav-item"><a class="nav-link" href="#produkte">Produkte</a></li>
+          <li class="nav-item"><a class="nav-link" href="#galerie">Galerie</a></li>
+          <li class="nav-item"><a class="nav-link" href="#kontakt">Kontakt</a></li>
+          <li class="nav-item ms-lg-2">
+            <a class="btn btn-accent btn-sm px-3" href="#kontakt">Anfrage senden</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header id="top" class="hero">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="container position-relative">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-7">
+          <p class="kicker mb-2">Carbon • Leichtbau • Performance</p>
+          <h1 class="display-5 fw-bold lh-sm">
+            Carbon-Parts & Veredelung<br class="d-none d-md-inline" />
+            im <span class="text-accent">Motorsport-Look</span>
+          </h1>
+          <p class="lead text-secondary-emphasis mt-3 mb-4">
+            Individuelle Carbon-Lösungen für dein Fahrzeug: präzise Verarbeitung, saubere Kanten,
+            OEM-Fitment – und ein Finish, das auch aus der Nähe überzeugt.
+          </p>
+
+          <div class="d-flex flex-wrap gap-2">
+            <a class="btn btn-accent btn-lg" href="#produkte">Produkte ansehen</a>
+            <a class="btn btn-outline-light btn-lg" href="#leistungen">So arbeiten wir</a>
+          </div>
+
+          <div class="hero-badges mt-4 d-flex flex-wrap gap-2">
+            <span class="badge badge-tech">Trockengewebe / Sichtcarbon</span>
+            <span class="badge badge-tech">Klarlack & UV-Schutz</span>
+            <span class="badge badge-tech">Einzelstück & Kleinserie</span>
+          </div>
+        </div>
+
+        <div class="col-lg-5">
+          <div class="hero-card">
+            <div class="hero-card__top d-flex justify-content-between align-items-center">
+              <div>
+                <div class="small text-secondary-emphasis">Schnellstart</div>
+                <div class="fw-semibold">Projekt anfragen</div>
+              </div>
+              <span class="pill">Antwort i. d. R. innerhalb 24–48h</span>
+            </div>
+
+            <div class="mt-3">
+              <div class="d-grid gap-2">
+                <a class="btn btn-light btn-lg" href="#kontakt">Kontaktformular</a>
+                <a class="btn btn-outline-light" href="#galerie">Ergebnisse ansehen</a>
+              </div>
+
+              <hr class="my-4">
+
+              <div class="d-flex gap-3">
+                <div class="stat">
+                  <div class="stat__n">Carbon</div>
+                  <div class="stat__l">für Exterieur & Interieur</div>
+                </div>
+                <div class="stat">
+                  <div class="stat__n">Fit</div>
+                  <div class="stat__l">präzise Passform</div>
+                </div>
+                <div class="stat">
+                  <div class="stat__n">Finish</div>
+                  <div class="stat__l">hochglanz / satin</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- optional image -->
+            <div class="hero-photo mt-4" role="img" aria-label="Carbon Oberfläche / Fahrzeug Detail"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- TRUST STRIP -->
+  <!-- Änderung: war vorher class="py-4" -> jetzt echte Section mit eigenem Hintergrund -->
+  <section class="section section-alt section-slim">
+    <div class="container">
+      <div class="trust-strip">
+        <div class="trust-item">
+          <span class="trust-dot" aria-hidden="true"></span>
+          <span>Präzise Kanten & saubere Übergänge</span>
+        </div>
+        <div class="trust-item">
+          <span class="trust-dot" aria-hidden="true"></span>
+          <span>Material- & Prozessfokus</span>
+        </div>
+        <div class="trust-item">
+          <span class="trust-dot" aria-hidden="true"></span>
+          <span>Einzelanfertigung bis Kleinserie</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LEISTUNGEN -->
+  <section id="leistungen" class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2 class="h1 fw-bold mb-2">Leistungen</h2>
+        <p class="text-secondary-emphasis mb-0">
+          Von der Idee bis zum montierfertigen Part: du bekommst eine klare Beratung und ein starkes Ergebnis.
+        </p>
+      </div>
+
+      <div class="row g-3 g-md-4 mt-1">
+        <div class="col-md-6 col-lg-4">
+          <div class="card card-carbon h-100">
+            <div class="card-body">
+              <div class="icon-chip mb-3" aria-hidden="true">⚙️</div>
+              <h3 class="h5 fw-semibold">Carbon-Veredelung</h3>
+              <p class="text-secondary-emphasis mb-0">
+                Sichtcarbon-Optik, Laminat, Finish-Aufbau – abgestimmt auf Look & Einsatzbereich.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="card card-carbon h-100">
+            <div class="card-body">
+              <div class="icon-chip mb-3" aria-hidden="true">🧩</div>
+              <h3 class="h5 fw-semibold">Teile & Komponenten</h3>
+              <p class="text-secondary-emphasis mb-0">
+                Exterieur, Interieur, Abdeckungen – mit Fokus auf Passform und saubere Kanten.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="card card-carbon h-100">
+            <div class="card-body">
+              <div class="icon-chip mb-3" aria-hidden="true">🧪</div>
+              <h3 class="h5 fw-semibold">Reparatur & Aufbereitung</h3>
+              <p class="text-secondary-emphasis mb-0">
+                Kleine Schäden, Klarlack-Refresh, Kanten-Nacharbeit – damit’s wieder wie neu aussieht.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-4">
+        <div class="callout">
+          <div class="callout__glow" aria-hidden="true"></div>
+          <div class="d-flex flex-column flex-lg-row justify-content-between align-items-lg-center gap-3">
+            <div>
+              <div class="fw-semibold">Du hast ein konkretes Teil im Kopf?</div>
+              <div class="text-secondary-emphasis">Schick Foto + Fahrzeugmodell + Wunsch-Finish — wir melden uns mit Einschätzung.</div>
+            </div>
+            <a class="btn btn-accent" href="#kontakt">Jetzt anfragen</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TECHNIKEN -->
+  <section id="techniken" class="section section-alt">
+    <div class="container">
+      <div class="section-head">
+        <h2 class="h1 fw-bold mb-2">Techniken</h2>
+        <p class="text-secondary-emphasis mb-0">
+          Carbon ist nicht nur Optik: Material, Gewebeausrichtung und Finish entscheiden über Wirkung & Haltbarkeit.
+        </p>
+      </div>
+
+      <div class="row g-3 g-md-4 mt-1">
+        <div class="col-lg-6">
+          <div class="card card-carbon h-100">
+            <div class="card-body">
+              <h3 class="h5 fw-semibold">Gewebe & Ausrichtung</h3>
+              <p class="text-secondary-emphasis mb-0">
+                2x2 Twill wirkt “klassisch Carbon”, UD eher “Motorsport clean”. Wir stimmen Optik und Verlauf passend zum Part ab.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="card card-carbon h-100">
+            <div class="card-body">
+              <h3 class="h5 fw-semibold">Finish & Schutz</h3>
+              <p class="text-secondary-emphasis mb-0">
+                Hochglanz oder Satin, mit UV-stabilem Klarlackaufbau für eine langlebige Oberfläche.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-4">
+        <div class="steps">
+          <div class="step">
+            <div class="step__n">1</div>
+            <div class="step__t">Anfrage</div>
+            <div class="step__d">Foto + Modell + Ziel (Optik / Gewicht / Reparatur)</div>
+          </div>
+          <div class="step">
+            <div class="step__n">2</div>
+            <div class="step__t">Plan</div>
+            <div class="step__d">Material / Finish / Timeline – transparent abgestimmt</div>
+          </div>
+          <div class="step">
+            <div class="step__n">3</div>
+            <div class="step__t">Umsetzung</div>
+            <div class="step__d">Saubere Kanten, gleichmäßige Optik, kontrollierter Aufbau</div>
+          </div>
+          <div class="step">
+            <div class="step__n">4</div>
+            <div class="step__t">Übergabe</div>
+            <div class="step__d">Montierfertig + Pflegehinweise</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUKTE -->
+  <section id="produkte" class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2 class="h1 fw-bold mb-2">Produkte</h2>
+        <p class="text-secondary-emphasis mb-0">
+          Beispiele (Platzhalter): tausche die Titel/Bilder später gegen echte Kategorien aus.
+        </p>
+      </div>
+
+      <div class="row g-3 g-md-4 mt-1">
+        <div class="col-md-6 col-lg-4">
+          <a class="product-card" href="#kontakt">
+            <div class="product-card__media media-1" aria-hidden="true"></div>
+            <div class="product-card__body">
+              <div class="product-card__k">Exterieur</div>
+              <div class="product-card__t">Spoiler, Diffusor, Spiegelkappen</div>
+              <div class="product-card__c">Anfrage →</div>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <a class="product-card" href="#kontakt">
+            <div class="product-card__media media-2" aria-hidden="true"></div>
+            <div class="product-card__body">
+              <div class="product-card__k">Interieur</div>
+              <div class="product-card__t">Blenden, Zierleisten, Lenkrad-Details</div>
+              <div class="product-card__c">Anfrage →</div>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <a class="product-card" href="#kontakt">
+            <div class="product-card__media media-3" aria-hidden="true"></div>
+            <div class="product-card__body">
+              <div class="product-card__k">Custom</div>
+              <div class="product-card__t">Einzelstück & Kleinserie</div>
+              <div class="product-card__c">Anfrage →</div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALERIE -->
+  <section id="galerie" class="section section-alt">
+    <div class="container">
+      <div class="section-head">
+        <h2 class="h1 fw-bold mb-2">Galerie</h2>
+        <p class="text-secondary-emphasis mb-0">
+          Ersetze die Platzhalter später durch echte Projektfotos (z. B. <code>/img/gallery-1.jpg</code> etc.).
+        </p>
+      </div>
+
+      <div class="row g-3 g-md-4 mt-1">
+        <div class="col-md-4">
+          <div class="gallery-tile g1" aria-label="Projektfoto 1" role="img"></div>
+        </div>
+        <div class="col-md-4">
+          <div class="gallery-tile g2" aria-label="Projektfoto 2" role="img"></div>
+        </div>
+        <div class="col-md-4">
+          <div class="gallery-tile g3" aria-label="Projektfoto 3" role="img"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KONTAKT -->
+  <section id="kontakt" class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2 class="h1 fw-bold mb-2">Kontakt</h2>
+        <p class="text-secondary-emphasis mb-0">
+          Schreib uns kurz, was du vorhast. (Formular ist Frontend-only; du kannst später z. B. Formspree/Netlify Forms anschließen.)
+        </p>
+      </div>
+
+      <div class="row g-3 g-md-4 mt-3">
+        <div class="col-lg-7">
+          <form class="card card-carbon p-3 p-md-4" id="contactForm">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label">Name</label>
+                <input class="form-control form-control-lg" name="name" autocomplete="name" required>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">E-Mail</label>
+                <input class="form-control form-control-lg" type="email" name="email" autocomplete="email" required>
+              </div>
+              <div class="col-12">
+                <label class="form-label">Fahrzeug / Modell</label>
+                <input class="form-control form-control-lg" name="car" placeholder="z. B. BMW E46, Golf 7 GTI, ..." required>
+              </div>
+              <div class="col-12">
+                <label class="form-label">Nachricht</label>
+                <textarea class="form-control form-control-lg" name="message" rows="5" placeholder="Was soll gemacht werden? (Teil, Finish, Fotos, ...)" required></textarea>
+              </div>
+              <div class="col-12 d-flex flex-wrap gap-2 align-items-center">
+                <button class="btn btn-accent btn-lg" type="submit">Anfrage absenden</button>
+                <span id="formStatus" class="text-secondary-emphasis small"></span>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <div class="col-lg-5">
+          <div class="card card-carbon p-3 p-md-4 h-100">
+            <h3 class="h5 fw-semibold">Direktkontakt</h3>
+            <p class="text-secondary-emphasis mb-3">
+              Du kannst hier später Telefon/E-Mail/Adresse eintragen (aus Impressum/Kontakt der alten Seite).
+            </p>
+
+            <div class="contact-list">
+              <div class="contact-item">
+                <div class="contact-label">E-Mail</div>
+                <div class="contact-value"><a href="mailto:info@el-carbon.de">info@el-carbon.de</a></div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-label">Telefon</div>
+                <div class="contact-value"><a href="tel:+498374000000">+49 …</a></div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-label">Ort</div>
+                <div class="contact-value">Dietmannsried / Allgäu</div>
+              </div>
+            </div>
+
+            <hr class="my-4">
+
+            <div class="small text-secondary-emphasis">
+              Tipp: Für eine funktionierende Formular-Absendung ohne Backend kann ich dir gleich Formspree o. ä. einbauen.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer class="pt-5 pb-4 text-secondary-emphasis small">
+        <div class="container px-0 d-flex flex-column flex-md-row justify-content-between gap-2">
+          <div>© <span id="year"></span> El-Carbon</div>
+          <div class="d-flex gap-3">
+            <a href="#" class="link-secondary">Impressum</a>
+            <a href="#" class="link-secondary">Datenschutz</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </section>
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
